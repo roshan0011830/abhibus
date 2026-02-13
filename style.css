@@ -1,0 +1,904 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  /* background-color: red; */
+  height: 100%;
+  width: 100%;
+}
+
+.navbar {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 15vh;
+  
+}
+
+.brand {
+  display: flex;
+}
+
+.navlinks {
+  display: flex;
+  gap: 30px;
+}
+
+.navlinks a {
+  color: rgba(0, 0, 0, 0.674);
+  text-decoration: none;
+  
+}
+
+#menuIcon{
+  display: none;
+}
+
+
+
+/* ------------bannner---------- */
+.banner {
+  height: 75vh;
+  background-image: url('./images/banner.png');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  border-radius: 0.3rem
+
+}
+
+/* ---------------discount cards----------- */
+.discount-box {
+  padding: 40px 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.discount-box h2 {
+  margin:20px 0;
+}
+
+.discount-cards {
+  height: 35vh;
+
+  gap: 30px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  padding: 15px 0;
+  display: flex;
+
+
+}
+
+.discount-cards .card{
+  height: 100%;
+  min-width: 310px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.discount-cards .card img {
+  height: 100%;
+  width: 100%;
+}
+
+.discount-box h3 {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+.small-cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  padding: 30px 0;
+}
+
+.small-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background-color: peachpuff;
+  border-radius: 0.3rem;
+  height: 18vh;
+  padding-top: 0.5rem;
+}
+
+.small-card-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.small-card-text h5 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.small-card-text p {
+  font-size: 15px;
+}
+
+
+/* ----------------------overlaYbOX------------ */
+.overlayBox{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 25vh;
+  width: 80%;
+  padding-inline: 30px;
+  background-color: white;
+  gap: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.6rem;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.425);
+}
+
+.overlayBox .upper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.upper-left span{
+  background-color: #F2E3BB;
+  padding: 0.4rem 1rem;
+  border-radius: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.upper-left img {
+  height: 25px;
+  width: 25px;
+}
+
+.overlayBox .bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.overlayBox .bottom input {
+  border: none;
+  outline: none;
+   background-color: rgba(128, 128, 128, 0.368);
+   padding: 0.3rem;
+}
+
+.overlayBox .bottom span {
+  background-color: rgba(128, 128, 128, 0.368);
+  padding: 0.3rem;
+}
+
+.overlayBox .bottom button{
+  background-color: crimson;
+  color: white;
+  padding: 0.4rem;
+  border: hidden;
+  border-radius: 0.3rem;
+
+}
+
+/* -------------------places css--------------- */
+
+.stateBoard-box {
+  padding: 60px;
+  background-color: rgba(128, 128, 128, 0.137);
+  border-radius: 0.5rem;
+}
+
+.place-cards-container{
+  display: flex;
+  gap: 30px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  padding: 30px 1rem;
+
+
+
+}
+
+.p-card {
+  height: 100%;
+  min-width: 250px;
+  border-radius: 0.5rem;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.p-card:hover{
+  scale: 1.03;
+  box-shadow: 0px 0px 15px black;
+
+}
+
+.p-card img {
+  height: 100%;
+  width: 100%;
+  
+}
+
+.chakraImg {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.p-text{
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.416);
+  padding: 1rem 0.5rem;
+  width: 100%;
+}
+
+.p-text button{
+  color: orange;
+  background-color: transparent;
+  border: 1px solid orange;
+  padding: 0.2rem 1rem;
+  border-radius: 0.2rem;
+}
+
+.p-text button:hover{
+  background-color: orange;
+  color: white;
+
+}
+
+/* ---------------banner 2------------- */
+.banner2{
+  min-height: 70vh;
+  background-color: cyan;
+  background-image: url('./images/banner2.png');
+  background-position: center;
+  background-size: 100% 100%;
+  position: relative;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.banner2Box {
+  background-color: rgba(0, 0, 0, 0.443);
+  width: fit-content;
+  max-height: fit-content;
+  
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 1rem;
+  font-size: 0.9rem;
+
+
+
+}
+
+.banner2Box img {
+  position: absolute;
+  width: 150px;
+  top: -27px;
+  left: 30px;
+}
+
+.bannerBox-item{
+  display: flex;
+  gap: 10px;
+  
+}
+
+/* ---------------online services css------------ */
+
+.online-container {
+  padding: 40px 0;
+  background-color: rgba(247, 247, 247, 0.345);
+}
+.onlineBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.online-left{
+  height: 100%;
+  width: 50%;
+}
+.online-right{
+  height: 100%;
+  width: 45%;
+}
+
+.online-right img{
+  height: 100%;
+  width: 100%;
+}
+.online-left img{
+  height: 100%;
+  width: 100%;
+}
+
+.onlineBox2 {
+  display: flex;
+}
+
+.list-box{
+  display: flex;
+}
+
+.onlineBox2 .online-left{
+  height: 100%;
+  width: 40%;
+}
+
+.onlineBox2 .online-right{
+  height: 100%;
+  width: 55%;
+}
+
+.onlineBox3{
+  display: flex;
+}
+
+/* -------------bannerbag---------- */
+.bagBanner{
+  min-height: 40vh;
+  background-image: url('./images/bag_banner.png');
+  background-position: center;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.bag-text {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.onlineBox4-container, .onlineBox5-container {
+  padding: 40px 0;
+}
+
+.onlineBox4{
+  display: flex;
+}
+
+.onlineBox5 {
+  display: flex;
+}
+
+.onlineBox6{
+  display: flex;
+}
+
+
+/* ----------companylogo------------- */
+.privateCompanies{
+  padding: 30px 0;
+  background-color: white;
+}
+
+.companyLogo-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  max-height: 15vh;
+  
+}
+
+.companyLogo-container div {
+  height: 100%;
+  padding: 0.3rem;
+}
+
+.companyLogo-container img {
+  height: 100%;
+  width: 100%;
+}
+
+.busBanner{
+  min-height: 50vh;
+  background-image: url('./images/bus.png');
+  color: white;
+  background-position: center;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 0.4rem;
+  
+}
+
+.bus-text{
+  padding: 0.8rem 1rem;
+  width: 60%;
+}
+
+.popularRoute-container {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0;
+}
+
+.rotesCardsBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1fr 1fr 1fr 1fr 1fr ;
+  gap: 1rem;
+}
+
+.r-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  background-color: rgba(128, 128, 128, 0.146);
+  border-radius: 0.4rem;
+  font-size: 0.7rem;
+}
+
+.r-card .packet{
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+  height: 100%;
+  /* width: 40%; */
+  padding: 0.3rem;
+}
+
+.r-img{
+  height: 80px;
+  width: 80px;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.r-img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.r-card button{
+  border: hidden;
+  padding: 0.3rem 1rem;
+  border-radius: 15px;
+  font-weight: bold;
+  box-shadow: 0px 0px 2px black;
+}
+.r-card button:hover{
+  background-color: orange;
+  color: white;
+}
+
+
+
+.brown-banner{
+  background-color: #4a0404;
+  height: 150px;
+  color: white;
+  border-radius: 0.5rem;
+  margin: 40px auto;
+}
+
+
+.brown-banner .textBox{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+/* --------------------download--------------- */
+.download{
+  display: flex;
+  background-color: antiquewhite;
+  padding: 40px 0;
+  border-radius: 0.4rem;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: 50%;
+}
+
+.leftImg img {
+  height: 100px;
+  width: 100px;
+}
+
+.left-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  display: flex;
+  gap: 30px;
+}
+
+#ratingImg{
+  width: 150px;
+  margin: 5px 0;
+}
+
+.r-left{
+  display: flex;
+  flex-direction: column;
+}
+.r-right img{
+  height: 100px;
+  width: 100px;
+}
+
+/* ---------------footer------------- */
+/* -------------------- routes footer -------------------- */
+
+.routes-footer {
+  background-color: #f3f3f3;
+  padding: 40px 0;
+  margin-top: 40px;
+}
+
+.routes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* tabs */
+.routes-tabs {
+  display: flex;
+  gap: 40px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  padding-bottom: 10px;
+}
+
+.routes-tabs span {
+  cursor: pointer;
+  color: gray;
+  padding-bottom: 8px;
+}
+
+.routes-tabs .active {
+  color: crimson;
+  border-bottom: 2px solid crimson;
+}
+
+/* links grid */
+.routes-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.route-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.route-col a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.route-col a:hover {
+  color: crimson;
+}
+
+
+/* ----------------------------media queries----------------- */
+
+@media(max-width: 576px){
+
+  .navbar{
+    min-height: 100px;
+  }
+  .navlinks {
+    display: none;
+  }
+ 
+  #menuIcon{
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+
+  .banner {
+    max-height: 500px;
+  }
+
+  .overlayBox{
+    max-height: 200px;
+  }
+
+  .upper-left{
+    display: none;
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bottom-left{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 80%;
+
+  }
+
+  .bottom-left input{
+    background-color: transparent !important;
+  }
+
+  .discount-cards{
+    max-height: 270px;
+  }
+
+  .discount-cards .card {
+    min-width: 350px;
+  } 
+
+  .small-cards-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .small-card{
+    max-width: 300px;
+    max-height: 100px;
+  }
+
+  .stateBoard-box{
+    padding: 40px 0px 0px 20px;
+  }
+
+  .p-card {
+    min-width: 300px;
+    min-height: 300px;
+  }
+
+  .banner2{
+    min-height: 480px;
+    background-size: cover;
+  }
+
+  .online-container{
+    padding: 40px 0;
+  }
+
+  .onlineBox{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .online-left{
+    width: 100%;
+  }
+
+  .online-right{
+    width: 100%;
+  }
+
+  .online-container2{
+    padding: 50px 0;
+  }
+
+  .onlineBox2{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .onlineBox2 .online-left{
+    width: 100%;
+  }
+
+  .onlineBox2 .online-right{
+    width: 100%;
+  }
+
+  .onlineBox3{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .onlineBox3 .online-left{
+    width: 100%;
+  }
+
+  .onlineBox3 .online-right{
+    width: 100%;
+  }
+
+  .bagBanner{
+    height: fit-content;
+  }
+
+  .bag-text{
+    background-color: rgba(0, 0, 0, 0.123);
+    width: 100%;
+    text-shadow: 1px 1px black;
+    padding: 40px 10px;
+  }
+
+  .onlineBox4-container{
+    padding: 40px 0;
+  }
+   .onlineBox4{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .onlineBox4 .online-left{
+    width: 100%;
+  }
+
+  .onlineBox4 .online-right{
+    width: 100%;
+  }
+
+  .onlineBox5-container{
+    padding: 0;
+  }
+
+  .onlineBox5{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .onlineBox5 .online-left{
+    width: 100%;
+  }
+  
+  .onlineBox5 .online-right{
+    width: 100%;
+  }
+  
+  .onlineBox6-container{
+    padding: 40px 0;
+  }
+
+  .onlineBox6{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .onlineBox6 .online-left{
+    width: 100%;
+  }
+
+  .onlineBox6 .online-right{
+    width: 100%;
+  }
+
+  .companyLogo-container{
+    min-height: fit-content;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  .busBanner{
+    min-height: fit-content;
+    padding: 10px;
+
+  }
+
+  .busBanner .bus-text{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.176);
+    text-shadow: 1px 1px black;
+  }
+
+  .rotesCardsBox{
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 1000px;
+  }
+
+  .r-card button{
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .accordion{
+    padding-bottom: 40px;
+
+  }
+
+ 
+  .brown-banner {
+    min-height: 420px;
+    padding: 20px 0;
+    margin-bottom: 40px;
+
+  }
+  
+
+  .brown-banner .textBox{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+
+  }
+
+  .textBox div{
+    background-color: rgba(0, 0, 0, 0.142);
+    width: 45%;
+    padding: 0.4rem 0;
+  }
+
+  .download{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .download .left {
+    width: 100%;
+  }
+
+  .download .right {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .routes-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+  #route-col4{
+    display: none;
+  }
+
+}
+
